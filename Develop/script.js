@@ -20,24 +20,7 @@ const Symbol_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
   arrayFromLowToHigh(123, 126)
 )
 
-// Generator functions - http://www.net-comber.com/charset.html
 
-fuction getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() *26) +97);
-}
-
-fuction getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() *26) +65);
-}
-
-fuction getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() *10) +48);
-}
-
-fuction getRandomSymbol() {
-  const symbols = '!@#$%^&*()<?>+=';
-  return String.fromCharCode(Math.floor(Math.random() *10) +48);
-}
 
 console.log(getRandomNumber())
 characterAmountNumber.addEventListener('input', syncCharacterAmount)
@@ -69,15 +52,15 @@ for ( let i = 0; i < characterAmount; i++) {
     charCode.length)]
     passwordCharacters.push(String.fromCharCode(characterCode))
 }
-  return passwordCharacters.join('')
-}
+  return passwordCharacters.join('!@#%^&*()')
+
 
 
 
 
 function arrayFromlowToHigh(low,high) {
   const array = []
-  for (let i = low; <= high; i++) {
+  for (let i = low;  high; i++) {
     array.push(i)
 
   }
